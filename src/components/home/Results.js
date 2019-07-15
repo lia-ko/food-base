@@ -64,8 +64,8 @@ class Results extends Component {
             <form className="refine " onSubmit={this.onSubmit}>
                 <div className="row">
                     <div className="form-group col-md-7">     
-                        <label className="field a-field a-field_a1 page__field" >
-                            <input className="field__input a-field__input" type="text" name="refine" onChange={this.onChange} value={this.state.refine} placeholder="Refine Search Results"/>
+                        <label className="field a-field a-field_a1 page__field" > Refine Search Results
+                            <input className="field__input a-field__input" type="text" name="refine" onChange={this.onChange} value={this.state.refine} placeholder="name/area/address"/>
                         </label>
                         
                     </div>
