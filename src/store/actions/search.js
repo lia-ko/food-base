@@ -18,7 +18,6 @@ export const asyncByCity = (city) => {
                         .all(promises)
                         .then(resArray => {
                             const restaurants = resArray.map(r => r.data.restaurants);
-                            console.log(restaurants);
                             restaurants.unshift(res.data.restaurants);
                             dispatch(prepareStoreDataFromArray(city, restaurants));
                         })

@@ -3,7 +3,6 @@ import Search from './Search';
 import Results from './Results';
 
 const Home = (props) => {
-    console.log(props);
     return(
         <div className="App">
             <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light move">
