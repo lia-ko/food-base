@@ -4,13 +4,13 @@ import axios from 'axios';
 
 export const asyncByCity = (city) => {
     return dispatch => {
-        axios.get('http://opentable.herokuapp.com/api/restaurants', { params: { city, per_page: 100 } })
+        axios.get('https://opentable.herokuapp.com/api/restaurants', { params: { city, per_page: 100 } })
             .then(res => {
                 if (res.data.total_entries > 100) {
                     const promises = [];
                     const pagesCount = Math.ceil(res.data.total_entries / 100);
                     for (let i = 2; i <= pagesCount; i++) {
-                        const p = axios.get('http://opentable.herokuapp.com/api/restaurants', { params: { city, per_page: 100, page: i } });
+                        const p = axios.get('https://opentable.herokuapp.com/api/restaurants', { params: { city, per_page: 100, page: i } });
                         promises.push(p);
                     }
 
