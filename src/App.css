@@ -1,0 +1,205 @@
+#brand{
+  font-family: 'Concert One', cursive;
+}
+
+body{
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+.field{
+  --uiFieldPlaceholderColor: var(--fieldPlaceholderColor, #767676);
+}
+
+.field__input{ 
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  font-family: inherit;
+  font-size: 1em;
+}
+
+.field__input:focus::-webkit-input-placeholder{
+  color: var(--uiFieldPlaceholderColor);
+}
+
+.field__input:focus::-moz-placeholder{
+  color: var(--uiFieldPlaceholderColor);
+  opacity: 1;
+}
+
+.a-field{
+  display: inline-block;
+}
+
+.a-field__input{ 
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.a-field__input:focus{
+  outline: none;
+}
+
+.a-field{
+  --uiFieldHeight: var(--fieldHeight, 40px);  
+  --uiFieldBorderWidth: var(--fieldBorderWidth, 2px);
+  --uiFieldBorderColor: var(--fieldBorderColor);
+
+  --uiFieldFontSize: var(--fieldFontSize, 1em);
+  --uiFieldHintFontSize: var(--fieldHintFontSize, 1em);
+
+  --uiFieldPaddingRight: var(--fieldPaddingRight, 15px);
+  --uiFieldPaddingBottom: var(--fieldPaddingBottom, 15px);
+  --uiFieldPaddingLeft: var(--fieldPaddingLeft, 15px);   
+
+  position: relative;
+  box-sizing: border-box;
+  font-size: var(--uiFieldFontSize);
+  padding-top: 1em;  
+}
+
+.a-field .a-field__input{
+  height: var(--uiFieldHeight);
+  padding: 0 var(--uiFieldPaddingRight) 0 var(--uiFieldPaddingLeft);
+  border-bottom: var(--uiFieldBorderWidth) solid var(--uiFieldBorderColor);  
+}
+
+.a-field .a-field__input::-webkit-input-placeholder{
+  opacity: 0;
+  transition: opacity .2s ease-out;
+}
+
+.a-field .a-field__input::-moz-placeholder{
+  opacity: 0;
+  transition: opacity .2s ease-out;
+}
+
+.a-field .a-field__input:not(:placeholder-shown) ~ .a-field__label-wrap .a-field__label{
+  opacity: 0;
+  bottom: var(--uiFieldPaddingBottom);
+}
+
+.a-field .a-field__input:focus::-webkit-input-placeholder{
+  opacity: 1;
+  transition-delay: .2s;
+}
+
+.a-field .a-field__input:focus::-moz-placeholder{
+  opacity: 1;
+  transition-delay: .2s;
+}
+
+.a-field .a-field__input:focus ~ .a-field__label-wrap .a-field__label{
+  opacity: 1;
+  bottom: var(--uiFieldHeight);
+}
+.a-field_a1 .a-field__input{
+  transition: border-color .2s ease-out;
+  will-change: border-color;
+}
+
+.a-field_a1 .a-field__input:focus{
+  border-color: var(--fieldBorderColorActive);
+}
+
+.field{
+  --fieldBorderColor: rgb(196, 213, 233);
+  --fieldBorderColorActive: rgb(68, 128, 177);
+}
+
+.btn {
+	background-color:#121a14;
+	-moz-border-radius:42px;
+	-webkit-border-radius:42px;
+  border-radius:42px;
+  margin-left: 3%;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:12px;
+	padding:16px 31px;
+	text-decoration:none;
+}
+.btn:hover {
+  background-color:#4d5ca8;
+  color: #ffffff;
+}
+.btn:active {
+	position:relative;
+	top:1px;
+}
+
+.card {
+  width: 250px;
+  border-radius: 30px;
+  -webkit-box-shadow: 9px 9px 5px -5px rgba(135,133,135,0.21);
+  -moz-box-shadow: 9px 9px 5px -5px rgba(135,133,135,0.21);
+  box-shadow: 9px 9px 5px -5px rgba(135,133,135,0.21);
+  margin: 20px;
+}
+.card img{
+  border-radius: 30px;
+}
+
+.nav-link{
+  color:white;
+  padding-bottom: 3%;
+}
+
+a:hover{
+  text-decoration: none;
+  color: white;
+}
+
+nav {
+    line-height: 50px;
+    height: 70px;
+    padding-top: 0;
+    text-decoration: none;
+    color: white;
+}
+
+.refine{
+  margin-left: 20%;
+}
+.navbar a::before,
+.navbar a::after {
+	display: inline-block;
+  opacity: 0;
+  text-decoration: none;
+  color: white;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.navbar a::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+.navbar a::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+.navbar a:hover::before,
+.navbar a:hover::after,
+.navbar a:focus::before,
+.navbar a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
