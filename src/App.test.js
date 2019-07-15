@@ -1,9 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import {convertPrice} from './components/home/ResultLine';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+test('number of $ in price, if 2 expect $$', () => {
+  expect(convertPrice(2)).toBe('$$');
 });
+
