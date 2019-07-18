@@ -28,12 +28,12 @@ JSON :
 ```
 {
 	“firstName”: “lia”,
-“lastName”: “terechenko”,
+	“lastName”: “terechenko”,
 	“school”: [“eci”, “ryerson university”],
 	“languages”: [“russian”, “english”, “french”, “spanish”, “mandarin”],
-“programmingLanguages”: [ “python”, “javascript”, “typescript”, “html”, “css”, “golang”], 
-“musicalInstruments”: [“piano”, “guitar”, “violin”, “accordion”],
-“hobbies”: [“dancing”, “gaming”],
-“personality”: [“friendly”, “reliable”, “ethical”, “creative”, “motivated”, “helpful”]
+	“programmingLanguages”: [ “python”, “javascript”, “typescript”, “html”, “css”, “golang”], 
+	“musicalInstruments”: [“piano”, “guitar”, “violin”, “accordion”],
+	“hobbies”: [“dancing”, “gaming”],
+	“personality”: [“friendly”, “reliable”, “ethical”, “creative”, “motivated”, “helpful”]
 }
 ```
